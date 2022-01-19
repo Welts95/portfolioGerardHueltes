@@ -1,4 +1,16 @@
 .capcelera {
-    background-color: 010B13;
-    font-size:large;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    left: 0px;
+    top: 1px;
+    background: #010B13;
+}
+.fonscap {
+    background-image: url('assets/images/fondoCabecera.jpg');
+    background-size: 100%;
+}
+.linkprincipal {
+    font-family: Racing Sans One;
+    font-size: normal;
 }
