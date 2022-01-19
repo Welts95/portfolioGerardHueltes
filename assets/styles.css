@@ -7,10 +7,12 @@
     background: #010B13;
 }
 .fonscap {
-    background-image: url('assets/images/fondoCabecera.jpg');
-    background-size: 100%;
+    background-image: url("assets/images/fondoCabecera.jpg");
+
 }
 .linkprincipal {
     font-family: Racing Sans One;
     font-size: normal;
+    color: white;
+    font-style: normal;
 }
