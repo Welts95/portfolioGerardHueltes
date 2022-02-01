@@ -80,10 +80,10 @@ div {
     overflow: hidden;
 }
 .textcap {
-    position: relative;
+    position: absolute;
     float: right;
-    padding-right: 25%;
-    padding-top:13%;
+    right: 25%;
+    top:35%;
     text-align: center;
 }
 .flexcontainer {
@@ -240,7 +240,6 @@ input[name="name"] {
     width: 100%;
     height: 40px;
 }
-
 .content textarea {
     width: 100%;
     resize: none;
@@ -258,6 +257,19 @@ input[name="name"] {
 .content button:hover {
     background: #00a39b;
     border: 1px solid rgba(0, 0, 0, .7);
+}
+
+/*Estil per movil*/
+
+@media only screen and (max-width: 768px) {
+    /*.linkscap[menu="burguer"] {
+        display:list-item;
+        background-image: url('./images/burger.png');
+        background: 100%;
+    }*/
+    .linkscap{
+        display: none;
+    }
 }
 
 /*font-family: 'Arimo', sans-serif;
