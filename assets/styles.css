@@ -1,11 +1,9 @@
 .container {
     padding: 0;
 }
-
 element {
     --color-blau: #00DBCF;
 }
-
 .navigation {
     display: flex;
     flex-flow: row wrap;
