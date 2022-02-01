@@ -4,21 +4,31 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Baloo+Tammudu+2&family=Barlow+Condensed&family=Racing+Sans+One&display=swap" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"  
+            integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous">
+        </script>
         <title>PortFolio Gerard Hueltes</title>
     </head>
     <body>
         <div class="container">
             <header>
-                <ul class="navigation">
-                    <li class="navigationleft"><a class="linkprincipal" href="index.html">GERARD HUELTES</a></li>
-                    <li><a class="linkscap" href="#sobremi">S0BR3 M1</a></li>
-                    <li><a class="linkscap" href="#elmeuprojecte">EL MEU PR0J3CT3</a></li>
-                    <li><a class="linkscap" href="#contacte">CONTACTE</a></li>
-                    <li><a class="linkscap" style="display: none;" menu="burguer">BURGER</a></li>
-                </ul>
+                <nav>
+                    <div class="navigation">
+                        <a class="linkprincipal" href="index.html">GERARD HUELTES</a>
+                        <div id="myLinks" class="navigation">
+                            <a class="linkscap" menu="item" href="#sobremi">S0BR3 M1</a>
+                            <a class="linkscap" menu="item" href="#elmeuprojecte">EL MEU PR0J3CT3</a>
+                            <a class="linkscap" menu="item" href="#contacte">CONTACTE</a>
+                        </div>
+                        <a href="javascript:void(0);" class="icon" menu="burger" onclick="menu()">
+                        <i class="fa fa-bars fa-3x"></i>
+                        </a>
+                    </div>
+                </nav>
             </header>
             <section>
                 <div class="fonscap">
@@ -103,6 +113,16 @@
                 <p>Es veu que no hi ha més contingut...<br><br>Pàgina creada per Gerard Hueltes per a Gerard Hueltes.</p>
                 </ul>
             </footer>
+            <script type="text/javascript">
+                function menu() {
+                    var x = document.getElementById("myLinks");
+                    if (x.style.display === "block") {
+                        x.style.display = "none";
+                    } else {
+                        x.style.display = "block";
+                    }
+                }
+            </script>
         </div>
     </body>
 </html>
