@@ -1,8 +1,19 @@
+:root {
+    --color-turquoise: #00DBCF;
+    --color-white: white;
+    --color-dark-blue: #010B13;
+    --color-bright-gray: #D6D6D6;
+    --color-gray: #CCCCCC;
+    --font-arimo: 'Arimo', sans-serif;
+    --font-baloo: 'Baloo Tammudu 2', cursive;
+    --font-barlow: 'Barlow Condensed', sans-serif;
+    --font-racing: 'Racing Sans One', cursive;
+}
+html {
+    scroll-behavior: smooth;
+}
 .container {
     padding: 0;
-}
-element {
-    --color-blau: #00DBCF;
 }
 .navigation {
     display: flex;
@@ -10,39 +21,40 @@ element {
     list-style: none;
     margin: 0;
     margin-top: 0;
-    background: #010B13;
+    background: var(--color-dark-blue);
     justify-content: flex-end;
 }
 .navigation a {
     text-decoration: none;
     display: block;
     padding: 1em;
+    scroll-behavior: smooth;
 }
 .linkprincipal {
     justify-self: flex-start;
     margin-right: auto;
-    font-family: 'Racing Sans One', cursive ;
-    color: #00DBCF;
+    font-family: var(--font-racing);
+    color: var(--color-turquoise);
     font-style: normal;
     font-size: 30px;
 }
 .linkscap {
-    font-family: 'Arimo', sans-serif ;
+    font-family: var(--font-arimo);
     font-size: 30px;
-    color: white;
+    color: var(--color-white);
     font-style: normal;
 }
 .navigation a:hover {
-    color: #00DBCF;
+    color: var(--color-turquoise);
 }
 .linkprincipal a:hover {
-    color: white;
+    color: var(--color-white);
 }
 .container {
-    position:absolute;
+    position: absolute;
     top: 0px;
     left:0px;
-    background:#D6D6D6;
+    background: var(--color-bright-gray);
 }
 .fonscap {
     position: relative;
@@ -52,14 +64,14 @@ element {
     background-repeat: no-repeat;
     height: 700px;
     width: 100%;
-    font-family: 'Arimo', sans-serif ;
-    color: white;
+    font-family: var(--font-arimo);
+    color: var(--color-white);
 }
 a {
     text-decoration: none;
 }
 h2 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-barlow);
     font-style: normal;
     font-size: 62px;
     text-align: center;
@@ -67,17 +79,17 @@ h2 {
     margin-block-end: 0.5em;
 }
 h2.blue, b {
-    color: #00DBCF;
+    color: var(--color-turquoise);
 }
 h3 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-barlow);
     font-style: normal;
     font-size: 48px;
     margin-block-start: 0;
     margin-block-end: 0;
 }
 p{
-    font-family: 'Arimo', sans-serif;
+    font-family: var(--font-arimo);
     font-size: 25px;
 }
 div {
@@ -94,7 +106,7 @@ div {
 }
 .flexcontainer {
     display: flex;
-    background: #D6D6D6;
+    background: var(--color-bright-gray);
     align-content: center;
     padding-right:5%;
     padding-left:5%;
@@ -107,20 +119,20 @@ div {
     line-height: 50px;
 }
 .flexcontainerfill p, li{
-    font-family: 'Arimo', sans-serif;
+    font-family: var(--font-arimo);
     font-size: 25px;
     text-align: justify;
 }
 .projecte {
-    background-color: #010B13;
-    color: white;
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
     padding-right: 5%;
     padding-left: 5%;
     text-align: justify;
     padding-bottom: 75px;
 }
 .contacte {
-    background: #D6D6D6;
+    background: var(--color-bright-gray);
     display: flex;
     justify-content: center;
     align-content: center;
@@ -130,7 +142,7 @@ div {
 }
 .contfill {
     position: relative;
-    background: #CCCCCC;
+    background: var(--color-gray);
     width: auto;
     padding: 40px;
     height: 250px;
@@ -153,7 +165,7 @@ span.programador {
     margin: 0 auto;
     max-width: 880px;
     height: 400px;
-    background: rgba(163, 163, 163, 0.32);
+    background: var(--color-gray);
     text-align: left;
     padding: 10px 0;
 }
@@ -173,8 +185,8 @@ label {
     background-image: url('./images/fondoFooter.jpg');
     background-size: 100%;
     overflow: hidden;
-    font-family: 'Arimo', sans-serif;
-    color:#00DBCF;
+    font-family: var(--font-arimo);
+    color: var(--color-turquoise);
     flex-shrink: 0;
     padding: 20px;
 }
@@ -200,7 +212,7 @@ label {
         margin: 0 auto;
         max-width: 880px;
         height: 450px;
-        background: rgba(121, 121, 121, 0.192);
+        background: var(--color-gray);
         text-align: left;
         padding: 10px 0;
 }
@@ -223,7 +235,7 @@ label {
     display: block;
     padding: 0;
     margin: 0;
-    font-family: 'Arimo', sans-serif;
+    font-family: var(--font-arimo);
 }
 input[name="email"]{
     width: 400px;
@@ -247,15 +259,15 @@ input[name="name"] {
 .content button {
     margin: 0;
     float: right;
-    background: var(--color-blau);
+    background: var(--color-turquoise);
     padding: 8px 77px;
-    border: 1px solid var(--color-blau);
+    border: 1px solid var(--color-turquoise);
     box-shadow: 0 0 5px rgba(0, 0, 0, .4);
-    font-family: 'Racing Sans One';
+    font-family: var(--font-racing);
     transition: all .3;
 }
 .content button:hover {
-    background: #00a39b;
+    background: #08b8af;
     border: 1px solid rgba(0, 0, 0, .7);
 }
 
@@ -264,14 +276,44 @@ input[name="name"] {
     .icon[menu="burger"] {
         display: none;
     }
+    @keyframes button-return-up { 
+        from{transform: translateY(-0px);}
+        to{transform: translateY(-10px);}  
+      }
+    .button-up {
+        position: fixed;
+        right: 4%;
+        bottom: 5%;
+        border-radius: 25%;
+        background: rgb(131, 131, 131);
+        opacity: 70%;
+        padding: 10px 10px;
+        cursor: pointer;
+    }
+    .button-up i {
+        opacity: 85%;
+        color: white;
+        padding-bottom:5px;
+    }
+    .button-up:hover {
+        animation-name: button-return-up;
+        animation-duration: 0.2s;
+        animation-timing-function: ease;
+        animation-delay: 0;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+        animation-play-state: running;
+    }
 }
+
 /*Estil per movil*/
 @media only screen and (max-width: 768px) {
     .icon {
         display: block;
         width: 50px;
         height: 50px;
-        color:white;
+        color:var(--color-white);
     }
     #myLinks {
         display: none;
@@ -281,7 +323,7 @@ input[name="name"] {
         position: relative;
     }
     [menu="item"] a:hover {
-        background-color: #ddd;
+        background-color: var(--color-bright-gray);
         color: black;
     }
     .flexcontainer {
@@ -298,11 +340,10 @@ input[name="name"] {
     .flexcontainerfill p{
         margin-top: 0px;
     }
-    
+    .projecte p, .flexcontainer p, .flexcontainer li {
+        font-size: 45px;
+    }
+    .flexcontainer h3, .contact-section h3 {
+        font-size: 55px;
+    }
 }
-
-
-/*font-family: 'Arimo', sans-serif;
-font-family: 'Baloo Tammudu 2', cursive;
-font-family: 'Barlow Condensed', sans-serif;
-font-family: 'Racing Sans One', cursive;*/
