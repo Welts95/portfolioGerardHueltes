@@ -12,9 +12,6 @@
 html {
     scroll-behavior: smooth;
 }
-.container {
-    padding: 0;
-}
 .navigation {
     display: flex;
     flex-flow: row wrap;
@@ -25,10 +22,7 @@ html {
     justify-content: flex-end;
 }
 .navigation a {
-    text-decoration: none;
     display: block;
-    padding: 1em;
-    scroll-behavior: smooth;
 }
 .linkprincipal {
     justify-self: flex-start;
@@ -51,6 +45,7 @@ html {
     color: var(--color-white);
 }
 .container {
+    padding: 0;
     position: absolute;
     top: 0px;
     left:0px;
@@ -88,12 +83,11 @@ h3 {
     margin-block-start: 0;
     margin-block-end: 0;
 }
-p{
+p, label{
     font-family: var(--font-arimo);
     font-size: 25px;
 }
 div {
-    padding-top: 10px;
     overflow: hidden;
 }
 .textcap {
@@ -146,28 +140,14 @@ div {
     width: auto;
     padding: 40px;
     height: 250px;
-}
-.contfill p {
+    justify-content: center;
     text-align: center;
+}
+.contfill img {
+    left:50%;
 }
 span.programador {
     font-size: 72px;
-}
-.containerformulari {
-    height: 560px;
-    padding: 30px 0 50px 0;
-    text-align: center;
-}
-.formulari {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 0 auto;
-    max-width: 880px;
-    height: 400px;
-    background: var(--color-gray);
-    text-align: left;
-    padding: 10px 0;
 }
 label {
     padding: 0;
@@ -177,14 +157,9 @@ label {
     width: 80%;
     margin: 0 auto;
 }
-.containerformulari h3 {
-    text-align: center;
-    padding-bottom: 50px;
-}
 .footer {
     background-image: url('./images/fondoFooter.jpg');
     background-size: 100%;
-    overflow: hidden;
     font-family: var(--font-arimo);
     color: var(--color-turquoise);
     flex-shrink: 0;
@@ -195,7 +170,7 @@ label {
     font-size: 20px;
 }
 .contact-section {
-    padding: 30px 0 50px 0;
+    padding: 30px 0 25px 0;
     text-align: center;
 }    
 .contact-section h3 {
@@ -221,15 +196,8 @@ label {
     margin: 0 auto;
 }
 .id {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
     width: 80%;
     margin: 0 auto;
-}
-.id.name, .id.email{
-    display: inline-block;
-    width: 100%;
 }
 label {
     display: block;
@@ -255,24 +223,26 @@ input[name="name"] {
 .content textarea {
     width: 100%;
     resize: none;
+    font-family: var(--font-arimo);
 }
 .content button {
-    margin: 0;
-    float: right;
     background: var(--color-turquoise);
-    padding: 8px 77px;
     border: 1px solid var(--color-turquoise);
     box-shadow: 0 0 5px rgba(0, 0, 0, .4);
     font-family: var(--font-racing);
-    transition: all .3;
+    padding: 8px 77px;
 }
 .content button:hover {
     background: #08b8af;
     border: 1px solid rgba(0, 0, 0, .7);
 }
 
+
 /*Estil per escritori*/
 @media only screen and (min-width: 768px) {
+    .navigation a {
+        padding: 1em;
+    }
     .icon[menu="burger"] {
         display: none;
     }
@@ -292,8 +262,8 @@ input[name="name"] {
     }
     .button-up i {
         opacity: 85%;
-        color: white;
-        padding-bottom:5px;
+        color: var(--color-white);
+        padding-bottom: 5px;
     }
     .button-up:hover {
         animation-name: button-return-up;
@@ -304,6 +274,19 @@ input[name="name"] {
         animation-direction: alternate;
         animation-fill-mode: both;
         animation-play-state: running;
+    }
+    .content button {
+        margin-right: 0;
+        float: right;
+    }
+    .id {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+    }
+    .id.name, .id.email{
+        display: inline-block;
+        width: 100%;
     }
 }
 
@@ -318,9 +301,15 @@ input[name="name"] {
     #myLinks {
         display: none;
     }
+    .navigation {
+        padding: 25px 10px; 
+    }
+    a.linkscap {
+        padding: 25px 25px 25px 25px;
+    }
     .navigation a.icon {
         display: block;
-        position: relative;
+        position: absolute;
     }
     [menu="item"] a:hover {
         background-color: var(--color-bright-gray);
@@ -337,7 +326,7 @@ input[name="name"] {
         line-height: 50px;
         padding-top: 0px;
     }
-    .flexcontainerfill p{
+    .contactefill p{
         margin-top: 0px;
     }
     .projecte p, .flexcontainer p, .flexcontainer li {
@@ -346,4 +335,38 @@ input[name="name"] {
     .flexcontainer h3, .contact-section h3 {
         font-size: 55px;
     }
+    .button-up {
+        display: none;
+    }
+    .contacte {
+        flex-direction: column;
+        row-gap: 25px;
+    }
+    .contfill {
+        width: 70%;
+    }
+    .contfill label {
+        padding-top: 15px;
+        font-size: 40px;
+    }
+    .content button {
+        font-size: 40px;
+        margin-left: 22%;
+    }
+    .contact-section form {
+        height: auto;
+    }
+    .subject {
+        height: auto;
+    }
+    #name, #email, #subject{
+        width: 100%;
+        font-size: 25px;
+    }
+    label {
+        font-size: 35px;
+    }
+    .content textarea {
+        font-size: 25px;
+    };
 }
